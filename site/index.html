@@ -26,24 +26,14 @@
       </ul>
       <nav>
         <ul class="navigation-list">
-          <li class="navigation-item">
-            <label for="catalog"><a href="catalog.html"></a>Каталог товаров</label>
-              <form action="https://echo.htmlacademy.ru/courses" method="get">
-                <select id=catalog>
-                  <option>Виртуальная реальность</option>
-                  <option>Моноподы для cелфи</option>
-                  <option>Экшн-камеры</option>
-                  <option>Фитнес-браслеты</option>
-                  <option>Умные часы</option>
-                  <option>Квадрокоптеры</option>
-                </select>
-              </form>
+          <li class="navigation-link">Каталог товаров
+            <a class="include-catalog" href="submenu.html">+</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">Доставка</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" href="#">Гараннтия</a>
+            <a class="navigation-link" href="#">Гарантия</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">Контакты</a>
@@ -58,6 +48,53 @@
         <button class="slider-button slider-prev" type="button">
           <span class="visually-hidden">Предыдущий товар</span>
         </button>
+        <div class="slider-product-display-none">
+          <img src="" class="slider-product" alt="Квадрокоптер с мощным лазером">
+          <span class="slider-product-number">01</span>
+          <span class="slider-product-tittle">Порхает как бабочка, жалит как пчела!</span>
+          <p class="slider-product-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+          <a href="#" class="button">Подробнее</a>
+          <table class="slider-product-sign"> 
+            <tr class="slider-product-sign-item">
+              <td class="slider-product-sign-item-value">800 м</td>
+              <td class="slider-product-sign-item-value">50 м</td>
+            </tr>
+            <tr class="slider-product-sign-item">
+              <td class="slider-product-sign-item-text">Дальность полета</td>
+              <td class="slider-product-sign-item-text">Радиус поражения</td>
+            </tr>
+          </table>
+        </div>
+        <div class="slider-product-display-block">
+          <img src="" class="slider-product" alt="Квадрокоптер с мощным лазером">
+          <span class="slider-product-number">02</span>
+          <span class="slider-product-tittle">Худеем правильно!</span>
+          <p class="slider-product-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+          <a href="#" class="button">Подробнее</a>
+          <span class="slider-product-sign-item-value">48 часов</span>
+          <span class="slider-product-sign-item-text">Без подзарядки</span>
+        </div>
+        <div class="slider-product-display-block">
+          <img src="" class="slider-product" alt="Квадрокоптер с мощным лазером">
+          <span class="slider-product-number">03</span>
+          <span class="slider-product-tittle">Делай селфи, как Бен Стиллер! </span>
+          <p class="slider-product-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 кг.
+          </p>
+          <a href="#" class="button">Подробнее</a>
+          <table class="slider-product-sign"> 
+            <tr class="slider-product-sign-item">
+              <td class="slider-product-sign-item-value">8,5 м</td>
+              <td class="slider-product-sign-item-value">5 кг</td>
+              <td class="slider-product-sign-item-value">Карбон</td>
+            </tr>
+            <tr class="slider-product-sign-item">
+              <td class="slider-product-sign-item-text">Длина палки</td>
+              <td class="slider-product-sign-item-text">Вес палки</td>
+              <td class="slider-product-sign-item-text">Материал</td>
+            </tr>
+          </table>
+        </div>
+        
         <button class="slider-button slider-next" type="button">
           <span class="visually-hidden">Следующий товар</span>
         </button>
