@@ -3,31 +3,37 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
-  </head> 
+  </head>
   <body>
-    <header class="page-header">
+    <header class="header">
       <a class="navigation-logo" href="index.html">
-        <img src="" class="page-header-logo" alt="Логотип Device">
+        <img src="" class="header-logo" alt="Логотип Device">
       </a>
-      <label for="search-catalog" class="visually-hidden">Поиск по каталогу</label>
-        <form action="https://echo.htmlacademy.ru/courses" method="get">
-          <input type="text" name="search" id=search-catalog placeholder="Поиск по каталогу">
-        </form>
-      <ul class="navigation-user">
-        <li class="navigation-user">
-          <a class="navigation-link" href="#">Войти</a>
-        </li>
-        <li class="navigation-user">
-          <a class="navigation-link" href="#">Сравнить</a>
-        </li>
-        <li class="navigation-user">
-          <a class="navigation-link" href="#">Корзина</a>
-        </li>
-      </ul>
       <nav>
-        <ul class="navigation-list">
-          <li class="navigation-link">Каталог товаров
-            <a class="include-catalog" href="submenu.html">+</a>
+        <label for="search-catalog" class="visually-hidden">Поиск по каталогу</label>
+          <form action="https://echo.htmlacademy.ru/courses" method="get">
+            <input type="text" name="search" id=search-catalog placeholder="Поиск по каталогу">
+          </form>
+        <ul class="navigation-user">
+          <li class="navigation-user">
+            <a class="navigation-link" href="#">Войти</a>
+          </li>
+          <li class="navigation-user">
+            <a class="navigation-link" href="#">Сравнить</a>
+          </li>
+          <li class="navigation-user">
+            <a class="navigation-link" href="#">Корзина</a>
+          </li>
+          <li class="navigation-user">
+            <a class="navigation-link" href="catalog.html">Каталог товаров</a>
+            <ul class="submenu-list">
+              <li class="submenu-item">Виртуальная реальность</li>
+              <li class="submenu-item">Моноподы для cелфи</li>
+              <li class="submenu-item">Экшн-камеры</li>
+              <li class="submenu-item">Фитнес-браслеты</li>
+              <li class="submenu-item">Умные часы</li>
+              <li class="submenu-item">Квадрокоптеры</li>
+            </ul>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">Доставка</a>
@@ -48,7 +54,7 @@
         <button class="slider-button slider-prev" type="button">
           <span class="visually-hidden">Предыдущий товар</span>
         </button>
-        <div class="slider-product-display-none">
+        <div class="slider-product">
           <img src="" class="slider-product" alt="Квадрокоптер с мощным лазером">
           <span class="slider-product-number">01</span>
           <span class="slider-product-tittle">Порхает как бабочка, жалит как пчела!</span>
@@ -65,7 +71,7 @@
             </tr>
           </table>
         </div>
-        <div class="slider-product-display-block">
+        <div class="slider-product">
           <img src="" class="slider-product" alt="Квадрокоптер с мощным лазером">
           <span class="slider-product-number">02</span>
           <span class="slider-product-tittle">Худеем правильно!</span>
@@ -74,7 +80,7 @@
           <span class="slider-product-sign-item-value">48 часов</span>
           <span class="slider-product-sign-item-text">Без подзарядки</span>
         </div>
-        <div class="slider-product-display-block">
+        <div class="slider-product">
           <img src="" class="slider-product" alt="Квадрокоптер с мощным лазером">
           <span class="slider-product-number">03</span>
           <span class="slider-product-tittle">Делай селфи, как Бен Стиллер! </span>
@@ -94,7 +100,6 @@
             </tr>
           </table>
         </div>
-        
         <button class="slider-button slider-next" type="button">
           <span class="visually-hidden">Следующий товар</span>
         </button>
@@ -188,15 +193,15 @@
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="newsletter-email">Email</label>
           <input class="field"  placeholder="email@example.com" type="email" name="newsletter-email" id="newsletter-email" required>
+          <button class="newsletter-button" type="submit">Подписаться</button>
         </form>
-        <button class="newsletter-button" type="submit">Подписаться</button>
           <span>Это бесплатно</span>
       </section >
     </main>
     <footer>
-     <img src="" alt="logo">
-     <address>Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
-     <nav class="footer-navigation-list ">
+    <img src="" alt="logo">
+    <address>Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
+    <nav class="footer-navigation-list ">
       <ul>
         <li class="footer-navigation-item">
           <a class="footer-navigation-link" href="#">Доставка</a>
@@ -208,9 +213,9 @@
           <a class="footer-navigation-link" href="#">Контакты</a>
         </li>
       </ul>
-     </nav>
-     <a href="tel:+78128121212">+7 (812) 812-12-12</a>
-     <section class="footer-social">
+    </nav>
+    <a href="tel:+78128121212">+7 (812) 812-12-12</a>
+    <section class="footer-social">
       <h2 class="visually-hidden">Социальные сети</h2>
       <ul class="footer-social-list">
         <li class="footer-social-item">
@@ -229,8 +234,8 @@
           </a>
         </li>
       </ul>
-     </section>
-     <p class="about-text">Сделано в <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a></p>
+    </section>
+    <p class="about-text">Сделано в <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a></p>
     </footer>
   </body>
 </html>
