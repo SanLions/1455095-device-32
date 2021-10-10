@@ -4,30 +4,35 @@
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
     <link rel="stylesheet" href="styles/styles.css">
+  </head>
   <body class="body">
     <header class="header">
       <a class="navigation-logo" href="index.html">
         <img src="images/full-logo.svg" class="header-logo" alt="Логотип Device" width="145" height="36">
       </a>
-      <nav>
-        <label for="search-catalog"><img src="images/scr.svg" alt="Лупа"></label>
-          <form action="https://echo.htmlacademy.ru/courses" method="get">
-            <input type="text" name="search" id=search-catalog placeholder="Поиск по каталогу">
-          </form>
+      <nav class="navigation">
         <ul class="navigation-user">
-          <li class="navigation-user">
+          <li class="navigation-user-item">
+            <label for="search-catalog"><img src="images/scr.svg" alt="Лупа"></label>
+              <form action="https://echo.htmlacademy.ru/courses" method="get">
+                <input type="text" name="search" id=search-catalog placeholder="Поиск по каталогу">
+              </form>
+          </li>
+          <li class="navigation-user-item">
             <a class="navigation-link" href="#">Войти</a>
           </li>
-          <li class="navigation-user">
+          <li class="navigation-user-item">
             <a class="navigation-link" href="#">Сравнить</a>
           </li>
-          <li class="navigation-user">
+          <li class="navigation-user-item">
             <a class="navigation-link" href="#">Корзина</a>
           </li>
-          <li class="navigation-item">
+        </ul>
+        <ul class="navigation-site">
+          <li class="navigation-site-item">
             <a class="navigation-link" href="catalog.html">Каталог товаров</a>
             <button type="button">+</button>
-            <ul class="submenu-list">
+            <ul class="submenu-list visually-hidden">
               <li class="submenu-item">Виртуальная реальность</li>
               <li class="submenu-item">Моноподы для cелфи</li>
               <li class="submenu-item">Экшн-камеры</li>
@@ -36,19 +41,19 @@
               <li class="submenu-item">Квадрокоптеры</li>
             </ul>
           </li>
-          <li class="navigation-item">
+          <li class="navigation-site-item">
             <a class="navigation-link" href="#">Доставка</a>
           </li>
-          <li class="navigation-item">
+          <li class="navigation-site-item">
             <a class="navigation-link" href="#">Гарантия</a>
           </li>
-          <li class="navigation-item">
+          <li class="navigation-site-item">
             <a class="navigation-link" href="#">Контакты</a>
           </li>
         </ul>
       </nav>
     </header>
-    <main class="main-inner">
+    <main class="main-container main-inner">
       <section>
       <h1 class="main-inner-title">Моноподы для селфи</h1>
         <ul class="breadcrumbs">
@@ -161,42 +166,47 @@
       <a href="index.html">
         <img src="images/footer-logo.svg" alt="Логотип магазина Device">
       </a>
-      <address>Санкт-Петербург, набережная реки Карповки, 5, литера П.</address>
-      <nav class="footer-navigation-nav">
-        <ul class="footer-navigation-list">
-          <li class="footer-navigation-item">
-            <a class="footer-navigation-link" href="#">Доставка</a>
-          </li>
-          <li class="footer-navigation-item">
-            <a class="footer-navigation-link" href="#">Гарантия</a>
-          </li>
-          <li class="footer-navigation-item">
-            <a class="footer-navigation-link" href="#">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-      <a href="tel:+78128121212">+7 (812) 812-12-12</a>
-      <section class="footer-social">
-        <h2 class="visually-hidden">Социальные сети</h2>
-        <ul class="footer-social-list">
-          <li class="footer-social-item">
-            <a class="footer-ss-icon" href="#">
-              <img src="images/footer-ss-icon1.png" alt="Фейсбук">
-            </a>
-          </li>
-          <li class="footer-social-item">
-            <a class="footer-ss-icon" href="#">
-              <img src="images/footer-ss-icon2.png" alt="Инстаграм">
-            </a>
-          </li>
-          <li class="footer-social-item">
-            <a class="footer-ss-icon" href="#">
-              <img src="images/footer-ss-icon3.png" alt="Твиттер">
-            </a>
-          </li>
-        </ul>
+      <div class="main-footer-container">
+        <address>Санкт-Петербург, набережная<br> реки Карповки, 5, литера П.</address>
+        <nav class="footer-navigation-nav">
+          <ul class="footer-navigation-list">
+            <li class="footer-navigation-item">
+              <a class="footer-navigation-link" href="#">Доставка</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a class="footer-navigation-link" href="#">Гарантия</a>
+            </li>
+            <li class="footer-navigation-item">
+              <a class="footer-navigation-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <a href="tel:+78128121212">Тел.:+7 (812) 812-12-12</a>
+      </div>
+      <section class="footer-info-link">
+        <div class="footer-border"></div>
+        <div class="footer-social">
+          <h2 class="visually-hidden">Социальные сети</h2>
+          <ul class="footer-social-list">
+            <li class="footer-social-item">
+              <a class="footer-ss-icon" href="#">
+                <img src="images/footer-ss-icon1.png" alt="Фейсбук">
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="footer-ss-icon" href="#">
+                <img src="images/footer-ss-icon2.png" alt="Инстаграм">
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a class="footer-ss-icon" href="#">
+                <img src="images/footer-ss-icon3.png" alt="Твиттер">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <span class="htmlacademy-link"><a href="https://htmlacademy.ru/">.html academy</a></span>
       </section>
-      <p class="about-text">Сделано в <a class="htmlacademy-link" href="https://htmlacademy.ru/">.html academy</a></p>
       </footer>
   </body>
 </html>
