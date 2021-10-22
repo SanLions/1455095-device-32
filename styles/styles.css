@@ -1,8 +1,11 @@
+    /* outline: 5px solid rgba(255, 99, 78, 0.5);
+    outline-offset: -5px; */
+
 @font-face {
     font-family: "raleway";
     font-style: normal;
     font-weight: 800;
-    src: url("fonts/raleway/raleway-800.woff2") format("woff2");
+    src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
     font-display: swap;
 }
 
@@ -10,7 +13,7 @@
     font-family: "rubik";
     font-style: normal;
     font-weight: 400;
-    src: url("fonts/rubik/rubik-400.woff2") format("woff2");
+    src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
     font-display: swap;
 }
 
@@ -18,7 +21,7 @@
     font-family: "rubik";
     font-style: normal;
     font-weight: 700;
-    src: url("fonts/rubik/rubik-700.woff2") format("woff2");
+    src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
     font-display: swap;
 }
 
@@ -26,7 +29,7 @@
     font-family: "rubik";
     font-style: normal;
     font-weight: 800;
-    src: url("fonts/rubik/rubik-800.woff2") format("woff2");
+    src: url("../fonts/rubik/rubik-800.woff2") format("woff2");
     font-display: swap;
 }
 
@@ -35,55 +38,85 @@ html {
 }
 
 body {
-    font-family: "rubik", sans-serif;
-    font-style: normal;
-    font-weight: 400;
+    font-family: "rubik", "arial", sans-serif;
     font-size: 18px;
-    line-height: 19px;  
-    color: black;
-    background-color: #FFFFFF;
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
+    line-height: 30px;  
     padding: 0;
-    margin: 0;
-}
-
-
-/*Sticky footers*/
-.main-container {
-    flex-grow: 1;
+    margin: 0; 
 }
 
 .header {
     background-color: #ffe17f;
     display: flex;
     width: 1160px;
+    height: 300px;
     margin: 0 auto;
     flex-direction: column;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 /*Навигация*/
+.header-logo {
+    margin-left: 60px;
+}
+
 .navigation {
     display: flex;
-    width: 1075px;
-    margin: 0 auto;
+    width: 1041px;
+    margin-left: 60px;
     flex-direction: column;
-
 }
 
 /*Пользовательская навигация*/
 .navigation-user {
+    line-height: 19px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 0;
-    margin: 0;
-    width: 1075px;
     list-style-type: none;
+    align-content: center;
+}
+
+.search-catalog {
+    margin-right: 20px;
+}
+
+.navigation-user-item input {
+    border: 0;
+    background-color: inherit;
+    
+}
+
+.navigation-user-item:nth-child(1) {
+    display: flex;
+    width: 480px;
+}
+
+.navigation-user-item:nth-child(2)::before {
+    width: 245px;
+}
+
+.navigation-user-item:nth-child(3) {
+    width: 120px;
+}
+
+.navigation-user-item:nth-child(4) {
+    width: 141px;
 }
 
 .navigation-user .navigation-link {
-    font-family: "rubik", sans-serif;
     font-size: 16px;
-    font-weight: 400;
     line-height: 19px;
     color: black;
     text-decoration: none;  
@@ -92,178 +125,202 @@ body {
 
 /*Навигация по сайту*/
 .navigation-site {
+    display: flex;
+    flex-wrap: wrap;
     padding: 0;
     margin: 0;
     width: 1075px;
     list-style-type: none;
 }
 
+.navigation-site-item:nth-child(1) {
+    width: 516px;
+}
+
+.navigation-site-item:nth-child(2) {
+    width: 140px;
+    margin-right: 19px;
+}
+
+.navigation-site-item:nth-child(3) {
+    width: 140px;
+    margin-right: 62px;
+}
+.navigation-site-item:nth-child(4) {
+    width: 140px;
+    margin-left: auto;
+}
+
 .navigation-site .navigation-link {
     font-family: "raleway", sans-serif;
-    font-size: 18px;
     font-weight: 800;
     line-height: 21px;
     color: black;
     text-decoration: none;
     text-transform: uppercase;
+    width: 516px;
+
 }
 
 /*Дополнительное меню*/
 .submenu-item {
-    font-family: "rubik", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
     line-height: 18px;
     color: black;
     list-style-type: none;
 }
 
-.page-container {
-    width: 1160px;
-    margin: 0 auto;
-}
+
 
 /*Слайдер*/
-.slider-product {
-    margin: 0;
-    padding: 0;
-    text-align: left;
+.slider {
+    width: 1160px;
+    margin: 0 auto;
     display: flex;
+}
+
+.slider-product {
+    display: flex; 
+}
+
+.slider-pagination-box {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
-.slider-product-2, .slider-product-3, .visually-hidden{
+.slider-pagination-list {
+    display: flex;
+    list-style-type: none;
+    width: 80px;
+    justify-content: space-between;
+    padding: 0;
+} 
+
+.slider-button {
+    height: 80px;
+}
+
+.slider-product-2, .slider-product-3 {
     display: none;
 }
 
-.slider-container-img {
-    width: 560px;
-}
-
-
-.slider-container-text {
+.slider-text {
     width: 560px;
 } 
 
-.slider-product-tittle {
+.slider-number {
+    font-size: 180px;
+    font-weight: 800;
+    padding-left: 261px;
+}
+
+.slider-tittle {
     font-family: "raleway", sans-serif;
     font-size: 50px;
     font-weight: 800;
     line-height: 50px;
 }
 
-.slider-product-description {
-    font-family: "rubik", sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 30px;
+.slider-content {
+    display: flex;
 }
 
-.slider-product-number {
-    font-family: "rubik", sans-serif;
-    font-size: 180px;
-    font-weight: 800;
-    line-height: 30px;
-    text-align: left;
-}
-
-.slider-product-sign-item-value {
-    font-family: "rubik", sans-serif;
-    font-size: 36px;
-    font-weight: 400;
-    line-height: 30px;
-}
-
-.slider-product-sign-item-text {
-    font-family: "rubik", sans-serif;
+.slider-sign {
+    display: flex;
+    flex-direction: column;
     font-size: 16px;
-    font-weight: 400;
-    line-height: 30px;
+    width: 160px;
 }
 
-.slider-pagination {
-    list-style-type: none;
-} 
+.slider-value {
+    font-size: 36px;
+}
 
 /*Кнопка*/
 .button {
     font-family: "raleway", sans-serif;
-    font-size: 18px;
     font-weight: 800;
     line-height: 21px;
     color: black;
-    background-color: #ffe17f;
     text-decoration: none;
     text-transform: uppercase;
+    background-color: #FFE17F;
+    letter-spacing: 20%;
 }
 
 /*Разделы товаров*/
 
 .product-category {
     width: 1160px;
+    margin: 0 auto;
 }
 
 .product-category-item {
     display: flex;
     justify-content: space-between;
-    margin: 0;
-    padding: 0;
     flex-direction: row;
     list-style-type: none;
-}
-
-.product-category-img {
-    width: 160px;
-    height: 160px;
-    background-color: #ffe17f;
-    margin-bottom: 33px;
-    margin-top: 70px;
+    padding: 0;
 }
 
 .product-category-container {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 160px;
 }
 
+.product-category-img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.category-container {
+    display: flex;
+    align-items: center;
+    width: 160px;
+    height: 160px;
+    background-color: #FFE17F;
+}
+
 .product-category-link {
+    display: flex;
+    width: 160px;
+    height: 60px;
+    margin-top: 33px;
     font-family: "raleway", sans-serif;
-    font-size: 18px;
     font-weight: 800;
     line-height: 24px;
     color: inherit;
     text-decoration: none;
 }
 
+.product-category-item li:nth-child(2) .product-category-img{
+    margin-top: auto;
+}
+
 /*Табы*/
 .services {
-    display: flex;
-    justify-content: space-between;
-    width: 1094px;
     background-color: #F0F0F0;
+}
+
+.services-box {
+    width: 1160px;
+    margin: 0 auto;
+    margin-bottom: 90px;
+    display: flex; 
 }
 
 .services-item {
     width: 280px; 
     border-right: 7px solid black;
-}
-
-.tabs_tittle {
-    margin: 0;
     padding: 0;
-}
-
-.tabs_block {
-    width: 497px;
-}
-
-.services-item {
+    align-items: center;
     list-style-type: none;
 }
 
 .services-item-button {
     font-family: "raleway", sans-serif;
-    font-size: 18px;
     font-weight: 800;
     line-height: 21px;  
     text-decoration: none;
@@ -271,33 +328,39 @@ body {
     color: black;
 }
 
-#tab_2, #tab_3 {
-    display: none;
+
+.tabs_body {
+    display: flex;
+    margin-left: 116px;
 }
+
 .tabs_tittle {
     font-family: "raleway", sans-serif;
     font-size: 50px;
     font-weight: 800;
-    line-height: 50px;  
+    line-height: 50px;
+    margin: 0;
 }
 
-.tabs_text {
-    font-family: "rubik", sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 30px;
+.tabs_block {
+    width: 497px;
+    margin-right: 61px;
 }
 
-
+#tab_2, #tab_3 {
+    display: none;
+}
 
 /*Строчка дополнительный сервис*/
 
 .extra-service {
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
     background-color: #F0F0F0;
     width: 1160px;
     height: 100px;
+    align-items: center;
 }
 
 .extra-service-link {
@@ -307,22 +370,39 @@ body {
     line-height: 23px;  
     text-decoration: none;
     color: black;
+    
+}
+
+.extra-service span {
+    width: 125px;
+    height: 100%;
+    background-color: #FFE17F;
+    display: flex;
+}
+
+.extra-service-img img{
+    margin: auto;
+}
+
+.extra-service-button {
+    padding-right: 30px;
 }
 
 /*Секция о компании*/
 
+
 .about-container {
     display: flex;
+    margin: 0 auto;
+    width: 1160px;
     justify-content: space-between;
 }
-
 .about {
     width: 497px;
-    
 }
 
 .contacts {
-    width: 513px;
+    width: 560px;
 }
 
 .about-title {
@@ -333,42 +413,26 @@ body {
     border-top: black solid 7px;
 }
 
-.about-main {
-    font-family: "rubik", sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 30px;
-}
-
 .delivery-item {
-    font-family: "rubik", sans-serif;
-    font-size: 18px;
     font-weight: 700;
-    line-height: 30px;
 }
 
 .contacts-subtitle {
-    font-family: "rubik", sans-serif;
     font-size: 24px;
     font-weight: 700;
-    line-height: 30px;
 }
 
-.page-main-address {
-    font-family: "rubik", sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 30px;
-    font-style: normal;
+.contacts-schedule {
+    list-style-type: none;
+    padding: 0;
 }
 
 .contacts a {
-    font-family: "rubik", sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 30px;
-    text-decoration: none;
     color: black;
+}
+
+.contacts address {
+    font-style: normal;
 }
 
 /*Секция подписка*/
@@ -377,12 +441,13 @@ body {
     background-color: #F0F0F0;
 }
 
-.newsletter-container {
-    display: flex;
-    justify-content: space-between;
+.page-container {
+    width: 1160px;
+    margin: 0 auto;
+    padding-bottom: 134px;
 }
 
-.newsletter-form-container {
+.newsletter-container {
     display: flex;
     justify-content: space-between;
 }
@@ -392,88 +457,90 @@ body {
     font-size: 50px;
     font-weight: 800;
     line-height: 50px;
+    width: 600px;
 }
 
 .newsletter-text {
     width: 560px;
+    padding-left: auto;
+}
+
+
+.newsletter-form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 
 .field {
     border: 0;
-    width: 560px;
-    border-bottom:1px solid #F0F0F0;
+    border-bottom: 3px solid rgb(0, 0, 0, 0.1);
+    width: 600px;
+    height: 55px;
+    background-color: inherit;
+    box-sizing: border-box;
 }
 
 .newsletter-button {
     font-family: "raleway", sans-serif;
-    font-size: 18px;
     font-weight: 800;
     line-height: 21px;
     text-transform: uppercase;
-    border-bottom: 1px solid #F0F0F0;
-    margin-bottom: 134px;
+    border: 3px solid rgb(0, 0, 0, 0.1);
+    width: 260px;
+    height: 55px;
+    box-sizing: border-box;
 }
 
 /*Подвал*/
-.main-footer {
-    
+.footer {
     background-color: #444444;  
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+    display: flex;  
 }
 
-.main-footer-container {
-    display: flex;  
-    flex-direction: row;
-    justify-content: space-between;
+.footer-container{
+    margin: 0 auto;
     width: 1160px;
 }
-.main-footer address {
-    font-family: "rubik", sans-serif;
+
+.footer-logo {
+    width: 145px;
+}
+
+.footer-contact {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-contact address {
     font-size: 16px;
-    font-weight: 400;
-    line-height: 18px;
-    text-decoration: none;
+    line-height: 19px;
     font-style: normal;
     color: white;
-    
+    width: 239px;
 }
 
-.footer-navigation-list {
+.footer-list {
     list-style-type: none;
+    width: 458px;
     display: flex;
-    
 }
 
-.footer-navigation-item {
-    width: 162px;
-    display: flex;
-    justify-content: space-between;     
+.footer-item {
+    width: 148px;  
 }
 
-.footer-navigation-link {
+.footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-link {
     font-family: "raleway", sans-serif;
-    font-size: 18px;
     font-weight: 800;
     line-height: 21px;
     text-transform: uppercase;
-    color: white;
-    text-decoration: none;
-    display: flex;  
-    justify-content: space-between;
-    
-}
-
-.main-footer a {
-    font-family: "rubik", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 30px;
-    text-decoration: none;
-    font-style: normal;
-    color: white;
+    letter-spacing: 0.2em;
 }
 
 .footer-info-link {
@@ -484,99 +551,202 @@ body {
 .footer-border {
     width: 80px;
 	height: 7px;
-    color: #FFC700;
-    font-size: 7px;
 	background: #FFC700;
 }
-.footer-social-list {
+
+.footer-social {
+    width: 150px;
+    padding: 0;
+}
+
+.social-list {
     list-style-type: none;
     display: flex;
-    flex-direction: row;
-   
+    justify-content: space-between;
+    padding: 0;
 }
 
-.htmlacademy-link {
-    color: #FFC700;
+.social-icon {
+    justify-content: space-between;
+
 }
-
-
-
-
-
-
-
-
-
-
 /*Каталог*/
+
 .main-inner-title {
     font-family: "raleway", sans-serif;
     font-size: 50px;
     font-weight: 800;
     line-height: 50px;
-}
+}   
 
 /*Хлебные крошки*/
+
+.breadcrumbs {
+    width: 1160px;
+    margin: 0 auto; 
+}
+
+.breadcrumbs-container {
+    width: 1100px;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+}
+
+.breadcrumbs-list {
+    width: 425px;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
 .breadcrumbs-link {
-    font-family: "rubik", sans-serif;
     font-size: 16px;
-    font-weight: 400;
     line-height: 19px;
     text-decoration: none;
-    font-style: normal;
     color: inherit;
 }
 
-/*Фильтры*/
+/*Шапка каталога внутри страницы*/
+
+.catalog-container {
+    background: linear-gradient(90deg, #e5e5e5,#ffffff); 
+    display: flex;
+    flex-direction: column;
+}
+
+.product-header {
+    background-color: #EBEBEB;
+}
+
+.product-header-container {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.product-header-box {
+    width: 1100px;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
 .filter-tittle {
     font-family: "raleway", sans-serif;
     font-size: 16px;
     font-weight: 800;
     line-height: 19px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
 }
 
-.catalog-filter-tittle {
-    font-family: "rubik", sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 20px;
-}
-
-.catalog-filter-item {
-    font-family: "rubik", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19px;
-}
-
-/*Сортировка*/
 .sorting-tittle {
     font-family: "raleway", sans-serif;
     font-size: 16px;
     font-weight: 800;
     line-height: 19px;
+    text-transform: uppercase;
+    width: 390px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 72px;
+    letter-spacing: 0.2em;
 }
-.sorting-item {
-    font-family: "rubik", sans-serif;
+
+.sorting-select {
+    background-color: inherit;
+    border: 0px;
     font-size: 16px;
-    font-weight: 400;
     line-height: 19px;
 }
 
+.catalog-products {
+    width: 1160px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.catalog-filter-container {
+    width: 269px;
+    margin-left: 60px;
+}
+
+.catalog-filter-tittle {
+    font-weight: 700;
+    line-height: 20px;
+    border-top: 2px solid #000000;
+    width: 200px;
+    padding-top: 12px;
+}
+
+.catalog-filter-group  {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    border: 0 none; 
+    padding-left: 0;
+    margin-top: 71px;
+}
+
+.catalog-filter-item {
+    font-size: 16px;
+    line-height: 19px;
+    margin-top: 21px;
+}
+
+.cost {
+    padding-bottom: 25px;
+}
+
+.product-box {
+    background-color: white;
+    padding-bottom: 77px;
+}
+
+.product-container {
+    width: 832px;
+}
+
 /*Карточки продуктов*/
+.ascending-container {
+    padding-left: 330px;
+}
+
+.ascending-container a {
+    text-decoration: none;
+}
+.product-list {
+    list-style-type: none;
+    margin-top: 69px;
+    padding-left: 72px;
+    display: grid;
+    grid-template-columns: 360px 360px;
+    gap: 44px 40px;  
+}
+
 .product-card-link {
-    font-family: "rubik", sans-serif;
-    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+  
+}
+
+.product-card-title {
     font-weight: 700;
     line-height: 24px;
     color: black;
     text-decoration: none;
+    padding: 0;
+    width: 280px;
+    
 }
 
 .product-card-price {
-    font-family: "rubik", sans-serif;
-    font-size: 18px;
-    font-weight: 400;
     line-height: 21px;
     color: black;
     text-decoration: none;
@@ -588,6 +758,31 @@ body {
     font-size: 16px;
     font-weight: 800;
     line-height: 19px;
+    width: 760px;
+    height: 55px;
+    outline: 5px solid rgba(240, 228, 226, 0.5);
+    outline-offset: -5px;
+    margin-left: 72px;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+}
+
+.pagination {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    padding: 0;
+    margin-top: 51px;
+    width: 760px;
+    margin-left: 72px;  
+    align-items: baseline;
+    background-color: #EBEBEB;
+}
+
+.pagination-list {
+    display: flex;
+    justify-content: space-between;
+    width: 145px;
+    list-style-type: none;
 }
 
 .pagination-nav {
@@ -595,18 +790,25 @@ body {
     font-size: 16px;
     font-weight: 800;
     line-height: 19px;
+    text-transform: uppercase;
+}
+
+.pagination-disabled {
+    margin-left: 29px;
+}
+
+.pagination-included {
+    margin-right: 29px;
 }
 
 .pagination-link {
-    font-family: "rubik", sans-serif;
     font-size: 16px;
-    font-weight: 400;
     line-height: 19px;
     color: black;
     text-decoration: none;
 }
 
-a .pagination-nav {
+.pagination-nav {
     font-family: "raleway", sans-serif;
     font-size: 16px;
     font-weight: 800;
@@ -616,9 +818,7 @@ a .pagination-nav {
 }
 
 /*Модальное окно*/
-.extra-service {
-    border: solid 1px;
-}
+
 
 .extra-service-link {
     font-family: "raleway", sans-serif;
