@@ -1,6 +1,3 @@
-    /* outline: 5px solid rgba(255, 99, 78, 0.5);
-    outline-offset: -5px; */
-
 @font-face {
     font-family: "raleway";
     font-style: normal;
@@ -45,7 +42,7 @@ body {
     margin: 0; 
 }
 
-.header {
+.main-header {
     background-color: #ffe17f;
     display: flex;
     width: 1160px;
@@ -67,17 +64,31 @@ body {
     overflow: hidden;
 }
 
+
+
 /*Навигация*/
+
+.navigation-logo:focus {
+    outline: none;
+}
+
+.navigation-logo:focus-visible .header-logo{
+    outline: 2px solid #AF4FFF;
+    border-radius: 15px;
+    outline-offset: 15px;
+}
+
 .header-logo {
     margin-right: auto;
-    margin-left: 45px;
+    margin-left: 60px;
     position: relative;
     bottom: 23px;
 }
 
 .navigation {
     width: 1070px;
-    margin: 0 auto;
+    margin-left: 61px;
+    margin-right: 59px;
     display: flex;
     flex-direction: column;
 }
@@ -103,19 +114,22 @@ body {
     text-decoration: none;
 }
 
+input[type="text"] {
+    font-family: "Rubik", "Arial", sans-serif;
+    font-size: 16px;
+    opacity: 0.3;
+}
+
 .link-search {
     position: relative;
     border: none;
     background-color: inherit;
-    opacity: 0.3;
     width: 480px;
     height: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 52px;
 }
-
-
 
 
 .navigation-user-item form::before  {    
@@ -131,7 +145,8 @@ body {
 .link-search:focus,
 .link-entry:focus,
 .link-liken:focus, 
-.link-basket:focus {
+.link-basket:focus,
+.link-exit {
     outline: none; 
     border: none;
 }
@@ -140,9 +155,11 @@ body {
 .link-search:focus-visible ,
 .link-entry:focus-visible ,
 .link-liken:focus-visible , 
-.link-basket:focus-visible  {
+.link-basket:focus-visible, 
+.link-exit:focus-visible {
     outline: 2px solid #AF4FFF;
     border-radius: 20px;
+    outline-offset: 5px;
 }
 
 
@@ -180,13 +197,23 @@ body {
     left: 21px;
 }
 
+.link-exit {
+    color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.link-exit-main {
+    visibility: hidden;
+}
+
+
 .link-liken {
     position: relative;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 41px;
     padding-right: 20px; 
-    left: 125px;
 }
 
 .link-liken::before {
@@ -206,8 +233,7 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 44px;
-    padding-right: 21px;
-    left: 147px;   
+    padding-right: 21px;  
 }
 
 .link-basket::before {
@@ -230,6 +256,7 @@ body {
     padding: 0;
     margin: 0;
     list-style-type: none;
+    z-index: 1;
 }
 
 .navigation-site-item:nth-child(1) {
@@ -487,6 +514,7 @@ body {
 }
 
 /*Кнопка*/
+
 .button {
     position: relative;
     font-family: "raleway", sans-serif;
@@ -1157,6 +1185,7 @@ body {
     letter-spacing: 0.2em;
     padding: 16px;
     margin-left: 7px;
+    border-bottom: 0.5px solidrgba(0, 0, 0, 0);
 }
 
 .footer-link:hover {
@@ -1172,7 +1201,7 @@ body {
 }
 
 .footer-link:focus-visible {
-    outline: 2px solid #AF4FFF;
+    border: 2px solid #AF4FFF;
     border-radius: 25px;
 }
 
@@ -1294,7 +1323,36 @@ body {
 .htmlacademy-link:active path {
     fill: rgb(124, 124, 124);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*Каталог*/
+
+.catalog-header {
+    background-color: #ffe17f;
+    display: flex;
+    width: 1160px;
+    height: 186px;
+    margin: 0 auto;
+    flex-direction: column;
+    position: relative;
+    bottom: -40px;
+    margin-bottom: 37px;
+}
+
 
 .main-inner-title {
     font-family: "raleway", sans-serif;
@@ -1316,32 +1374,79 @@ body {
     margin-left: auto;
     display: flex;
     flex-direction: column;
-    margin-left: 60px;
 }
 
 .breadcrumbs-list {
-    width: 425px;
     display: flex;
     list-style-type: none;
-    justify-content: space-between;
+    justify-content: start;
     margin: 0;
     padding: 0;
 }
 
-.breadcrumbs-link {
+.breadcrumbs-main,
+.breadcrumbs-catalog,
+.breadcrumbs-monopods {
+    position: relative;
     font-size: 16px;
     line-height: 19px;
     text-decoration: none;
-    color: inherit;
+    color: #000000;
+    opacity: 0.6;
+    margin-right: 36px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-/*Шапка каталога внутри страницы*/
+.breadcrumbs-main::after,
+.breadcrumbs-catalog::after {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 7px;
+    background-image: url("../images/decor/arrow.svg");
+    top: 7px;
+    right: -21px;
+    opacity: 0.3;
+}
+
+.breadcrumbs-main:hover,
+.breadcrumbs-catalog:hover,
+.breadcrumbs-monopods:hover {
+    opacity: 1;
+}
+
+.breadcrumbs-main:focus,
+.breadcrumbs-catalog:focus,
+.breadcrumbs-monopods:focus {
+    outline: none;
+}
+
+.breadcrumbs-main:focus-visible,
+.breadcrumbs-catalog:focus-visible,
+.breadcrumbs-monopods:focus-visible {
+    border: 5px solid #AF4FFF;
+    color: rgba(102, 102, 102);
+    opacity: 1;
+}
+
+.breadcrumbs-main:active,
+.breadcrumbs-catalog:active,
+.breadcrumbs-monopods:active {
+    opacity: 0.3;
+}
+
+
+/* Каталог */
 
 .catalog-container {
     background: linear-gradient(to right, #e5e5e5 50%, #ffffff 50%);
     display: flex;
     flex-direction: column;
 }
+
+/*Шапка каталога внутри страницы*/
+
 
 .product-header {
     background: linear-gradient(to right, #dcdcdc 50%, #ebebeb 50%);
@@ -1365,10 +1470,13 @@ body {
     display: flex;
     justify-content: space-between;
     background: #EBEBEB;
-    align-items: baseline;
+    align-items: center ;
     padding-top: 25px;
     padding-bottom: 25px;
+    position: relative;
 }
+
+/*Фильтры*/
 
 .filter-tittle {
     width: 268px;
@@ -1377,28 +1485,255 @@ body {
     font-weight: 800;
     line-height: 19px;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.2em; 
 }
 
-.sorting-tittle {
-    font-family: "raleway", sans-serif;
-    font-size: 16px;
-    font-weight: 800;
-    line-height: 19px;
-    text-transform: uppercase;
-    width: 390px;
+/* Рэнж */
+
+.range-scale {
+    position: relative;
+    height: 3px;
+    margin-bottom: 15px;
+    background-color:#DCDCDC;
+    width: 200px;
+}
+
+.range-bar {
+    position: absolute;
+    height: 3px;
+    background-color: #000;
+  }
+
+.range-toggle {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: #EBEBEB;
+    border: 3px solid #000000;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.range-toggle:active {
+    background-color: #000000;
+} 
+
+  .range-toggle:focus {
+    outline: none;
+}
+
+.range-toggle:focus-visible {
+    border: 3px solid #AF4FFF;
+}
+
+.toggle-min {
+    top: -8px;
+    left: 0;
+}
+
+.toggle-max {
+    top: -8px;
+    right: -8px;
+}
+
+.range-wrapper-inputs {
     display: flex;
-    justify-content: space-between;
-    margin-left: 72px;
-    letter-spacing: 0.2em;
+    justify-content: start;
 }
 
-.sorting-select {
+.catalog-filter-label {
+    display: flex;
+    margin-right: 27px;
+    align-items: baseline;
+    font-size: 15px;
+    opacity: 0.3;
+    margin-bottom: 36px;
+}
+
+.range-toggle:active .catalog-filter-label {
+    opacity: 1;
+} 
+
+
+.range-input {
+    width: 59px;
+    font: inherit;
+    padding: 0 3px;
     background-color: inherit;
-    border: 0px;
+    border: none;
+    appearance: textfield;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+/*Фильтры. Чекбоксы*/
+
+.catalog-filter-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.color-list {
+    margin-bottom: 45px;
+}
+
+.control {
     font-size: 16px;
     line-height: 19px;
+    margin-top: 21px;
+    position: relative;
+    display: block;
+    padding-left: 37px;
+    cursor: pointer;
 }
+
+.control-mark {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000000;
+    top: -2px;
+    left: 0;
+    border-radius: 3px;
+    opacity: 0.2;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.control-mark svg {
+    display: none;
+    fill: #000000;
+}
+
+.control-input:checked ~ .control-mark svg {
+    display: block;
+    position: absolute;
+    left: 3px;
+    top: 3px;   
+}
+
+.control-input:checked  ~ .control-mark {
+    opacity: 1;
+}
+
+
+.control-input:checked:hover  ~ .control-mark {
+    opacity: 0.5;
+}
+
+.control-input:checked:hover  ~ .control-label {
+    opacity: 0.5;
+}
+
+.control-input:focus-visible ~ .control-label {
+    color: #AF4FFF;
+}
+
+.control-input:focus-visible ~ .control-mark {
+    opacity: 1;
+    border-color: #AF4FFF;
+}
+
+.control-input:focus-visible ~ .control-mark svg {
+    fill: #AF4FFF;
+}
+
+.control-input:checked:active  ~ .control-mark {
+    opacity: 0.2;
+}
+
+.control-input:checked:active  ~ .control-label {
+    opacity: 0.2;
+}
+
+
+/*Фильтры. Радиокнопки*/
+
+.optionally {
+    margin-bottom: 14px;
+}
+
+.control-radio {
+    position: relative;
+    display: block;
+    padding-left: 36px;
+    font-size: 16px;
+    line-height: 19px; 
+    color: #000000;
+    cursor: pointer; 
+    margin-bottom: 22px;
+}
+
+.control-mark-radio {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    opacity: 0.2;
+}
+
+.control-mark-radio::before {
+    content: "";
+    display: none;
+    width: 8px;
+    height: 8px;
+    background-color: #000000;
+    border-radius: 50%;
+}
+
+.control-label-radio {
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+}
+
+.control-input-radio:checked ~ .control-mark-radio::before {
+    display: block;
+}
+
+.control-input-radio:checked ~ .control-mark-radio {
+    opacity: 1;
+}
+
+
+.control-input-radio:focus-visible ~ .control-label-radio {
+    color: #AF4FFF;
+}
+
+.control-input-radio:focus-visible ~ .control-mark-radio {
+    opacity: 1;
+    border-color: #AF4FFF;
+}
+
+.control-input-radio:focus-visible ~ .control-mark-radio::before {
+    background-color: #AF4FFF;
+}
+
+.control-input-radio:hover ~ .control-label-radio,
+.control-input-radio:hover ~ .control-mark-radio, 
+.control-input-radio:hover ~ .control-mark-radio::before {
+    opacity: 0.5;
+}
+
+.control-input-radio:active ~ .control-label-radio,
+.control-input-radio:active ~ .control-mark-radio, 
+.control-input-radio:active ~ .control-mark-radio::before  {
+    opacity: 0.2;
+}
+
 
 .catalog-products {
     width: 1160px;
@@ -1414,7 +1749,7 @@ body {
 .catalog-filter-tittle {
     font-weight: 700;
     line-height: 20px;
-    border-top: 2px solid #000000;
+    border-top: 3px solid #000000;
     width: 200px;
     padding-top: 12px;
 }
@@ -1422,16 +1757,13 @@ body {
 .catalog-filter-group  {
     display: flex;
     flex-direction: column;
-    width: 200px;
     border: 0 none; 
     padding-left: 0;
-    margin-top: 71px;
+    
 }
 
-.catalog-filter-item {
-    font-size: 16px;
-    line-height: 19px;
-    margin-top: 21px;
+.cost-box {
+    margin-top: 71px;
 }
 
 .cost {
@@ -1447,20 +1779,150 @@ body {
     width: 832px;
 }
 
-/*Карточки продуктов*/
+/* Кнопка в фильтре  */
 
-.product-card-image {
-    max-width: 100%;
-    height: auto;
-} 
+.button-form  {
+    
+    background-color: inherit;
+    z-index: 1;
+}
+
+.button-form {
+    position: relative;
+    font-family: "raleway", sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border: none;
+    padding: 10px;
+    display: block;
+    width: 200px;
+    min-height: 40px;   
+    background-image: linear-gradient(to bottom, transparent 17px, #FFC700 17px, #FFC700 24px, transparent 24px, transparent);
+    outline: none;
+    cursor: pointer;
+}
+
+.button-form:focus {
+    background-image: linear-gradient(to bottom, transparent 17px, #AF4FFF 17px, #AF4FFF 24px, transparent 24px, transparent);
+}
+
+.button-form:hover {
+    background-color: #FFC700;
+}
+
+.button-form:active {
+    color: rgba(0, 0, 0, 0.3);
+    background-color: #FFC700;
+    background-image: none;
+}
+
+
+/* Селект  */
+
+.sorting-tittle {
+    font-family: "raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 19px;
+    text-transform: uppercase;
+    width: 390px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 72px;
+    letter-spacing: 0.2em;
+}
+
+.sorting-select {
+    position: relative;
+    background-color: inherit;
+    border: 0px;
+    font-size: 16px;
+    line-height: 19px;
+    box-sizing: border-box;
+    border: 5px solid rgba(0, 0, 0, 0);
+    top: -5px;
+}
+
+.sorting-select:hover {
+    opacity: 0.6;
+}
+
+.sorting-select:focus {
+    border: none;
+    outline: none;
+}
+
+.sorting-select:focus-visible {
+    border: 5px solid #AF4FFF;
+}
+
+.sorting-select:active {
+    opacity: 0.3;
+}
+
 
 .ascending-container {
+    display: flex;
+    justify-content: space-between; 
     padding-left: 330px;
+}
+
+
+.ascending,
+.descending {
+    padding: 10px 10px 10px 10px;
+    margin-right: 5px;
+    position: relative;
+}
+
+.ascending:focus,
+.descending:focus {
+    outline: none;
+}
+
+.ascending:focus-visible,
+.descending:focus-visible {
+    outline: 5px solid #AF4FFF;
+}
+
+.ascending::after {
+    content: "";
+    position: absolute;
+    background-image: url(../images/decor/sort.svg);
+    width: 10px;
+    height: 10px;
+    top: 5px;
+    left: 5px;
+    transform: rotate(180deg);
+    opacity: 0.3;
+} 
+
+.descending::before {
+    content: "";
+    position: absolute;
+    background-image: url(../images/decor/sort.svg);
+    width: 10px;
+    height: 10px;
+    top: 5px;
+    left: 5px;
+}
+
+.ascending:hover, 
+.descending:hover {
+    opacity: 0.3;
 }
 
 .ascending-container a {
     text-decoration: none;
 }
+
+
+/*Карточки продуктов*/
+
 .product-list {
     list-style-type: none;
     margin-top: 69px;
@@ -1470,26 +1932,84 @@ body {
     gap: 44px 40px;  
 }
 
-.product-card-link {
+.product-card {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    position: relative;
+}
+
+.product-card-box {
+    position: relative;
+}
+
+.product-card:hover .product-card-img {
+    opacity: 0.5;
+}
+
+.product-card:hover .product-card-button {
+    display: block;
+}
+
+.product-card:focus-visible {
+    outline: none;
+}
+
+.product-card:focus-visible .product-card-img{
+    outline: 5px solid #AF4FFF;
+}
+
+.product-card:focus-visible .product-card-info {
+    color: #AF4FFF;
+}
+
+.product-card-img {
+    max-width: 100%;
+    height: auto; 
+} 
+
+.product-card-button {
+    font-family: "raleway", sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 40px;
+    letter-spacing: 0.2em;
+    position: absolute;
+    padding-left: 40px; 
+    top: calc(50% - 20px);
+    left: 75px;
+    display: none;
+    width: 180px;
+    height: 40px;
+    background-image: linear-gradient(to bottom, transparent 16px, #FFC700 16px, #FFC700 24px, transparent 24px, transparent);
+}
+
+.product-card-button:hover {
+    background-color: #FFC700;
+}
+
+.product-card-button:active {
+    background-color: #FFC700;
+    color: rgb(0, 0, 0, 0.3);
+}
+
+.product-card-info {
     display: flex;
     justify-content: space-between;
-  
+    align-items: baseline;
 }
 
 .product-card-title {
     font-weight: 700;
     line-height: 24px;
-    color: black;
-    text-decoration: none;
-    padding: 0;
-    width: 280px;
-    
+    letter-spacing: -0.02em;
 }
 
 .product-card-price {
     line-height: 21px;
-    color: black;
-    text-decoration: none;
+    display: flex;
+    width: 66px;
 }
 
 /*Пагинация*/
@@ -1502,7 +2022,25 @@ body {
     height: 55px;
     margin-left: 72px;
     border: 3px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
+
+.pagination-show-more:focus {
+    outline: none;
+}
+
+.pagination-show-more:focus-visible {
+    border: 5px solid #AF4FFF;
+}
+
+.pagination-show-more:hover {
+    border: 3px solid rgba(0, 0, 0, 1);
+}
+
+.pagination-show-more:active {
+    opacity: 0.3;
+}
+
 
 .pagination {
     display: flex;
@@ -1519,7 +2057,6 @@ body {
 .pagination-list {
     display: flex;
     justify-content: space-between;
-    width: 145px;
     list-style-type: none;
 }
 
@@ -1529,6 +2066,9 @@ body {
     font-weight: 800;
     line-height: 19px;
     text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+    padding: 17px;
 }
 
 .pagination-disabled {
@@ -1539,21 +2079,45 @@ body {
     margin-right: 29px;
 }
 
+.pagination-disabled:hover, 
+.pagination-included:hover {
+    background-color: rgba(220, 220, 220, 1)
+}
+
 .pagination-link {
     font-size: 16px;
     line-height: 19px;
-    color: black;
+    color: rgba(0, 0, 0, 0.3);
     text-decoration: none;
+    padding: 8px 15px;
+    border: 5px solid rgb(0, 0, 0, 0);
 }
 
-.pagination-nav {
-    font-family: "raleway", sans-serif;
-    font-size: 16px;
-    font-weight: 800;
-    line-height: 19px;
-    color: black;
-    text-decoration: none;
+.pagination-link:hover {
+    opacity: 1;
 }
+
+.pagination-link:focus,
+.pagination-disabled:focus,
+.pagination-included:focus {
+    outline: none;
+}
+
+.pagination-link:focus-visible,
+.pagination-disabled:focus-visible,
+.pagination-included:focus-visible {
+    outline: 5px solid #AF4FFF;
+}
+
+
+
+.pagination-disabled:active,
+.pagination-included:active {
+    opacity: 0.6;
+} 
+
+
+
 
 /*Модальное окно*/
 
