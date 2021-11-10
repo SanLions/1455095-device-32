@@ -1,61 +1,65 @@
-  <!DOCTYPE html>
-  <html lang="ru">
-    <head>
-      <meta charset="utf-8">
-      <title>HTML Academy: Девайс</title>
-      <link rel="stylesheet" href="styles/styles.css">
-    </head>
-    <body class="body">
-      <header class="header">
-        <a class="navigation-logo" href="index.html">
-        <img src="images/full-logo.svg" class="header-logo" alt="Логотип Device" width="145" height="36">
-        </a>
-        <nav class="navigation">
-          <ul class="navigation-user">
-            <li class="navigation-user-item">
-                <form action="https://echo.htmlacademy.ru/courses" method="get">
-                  <input class="link-search" type="text" name="search" id="search" placeholder="Поиск по сайту">
-                </form>
-            </li>
-            <li class="navigation-user-item">
-              <a class="navigation-link link-entry" href="#">Войти</a>
-            </li>
-            <li class="navigation-user-item">
-              <a class="navigation-link link-liken" href="#">Сравнить</a>
-            </li>
-            <li class="navigation-user-item">
-              <a class="navigation-link link-basket" href="#">Корзина</a>
-            </li>
-          </ul>
-          <ul class="navigation-site">
-            <li class="navigation-site-item">
-              <a class="link-catalog" href="catalog.html">Каталог товаров</a>
-              <ul class="submenu-list">
-                <li class="submenu-item">
-                  <a class="submenu-link">Виртуальная реальность</a>
-                  <a class="submenu-link">Моноподы для cелфи</a>
-                  <a class="submenu-link">Экшн-камеры</a>
-                </li>
-                <li class="submenu-item">
-                  <a class="submenu-link">Фитнес-браслеты</a>
-                  <a class="submenu-link">Умные часы</a>
-                </li>
-                <li class="submenu-item"><a class="submenu-link">Квадрокоптеры</a>
-                </li>
-              </ul>
-            </li>
-            <li class="navigation-site-item">
-              <a class="link-delivery" href="#">Доставка</a>
-            </li>
-            <li class="navigation-site-item">
-              <a class="link-garanted" href="#">Гарантия</a>
-            </li>
-            <li class="navigation-site-item">
-              <a class="link-contact" href="#">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body class="body">
+    <header class="main-header">
+      <a class="navigation-logo" href="index.html">
+      <img src="images/full-logo.svg" class="header-logo" alt="Логотип Device" width="145" height="36">
+      </a>
+      <nav class="navigation">
+        <ul class="navigation-user">
+          <li class="navigation-user-item">
+              <form action="https://echo.htmlacademy.ru/courses" method="get">
+                <label class="visually-hidden" for="search">Поиск</label>
+                <input class="link-search" type="text" name="search" id="search" placeholder="Поиск по сайту">
+              </form>
+          </li>
+          <li class="navigation-user-item">
+            <a class="navigation-link link-entry" href="#">Войти</a>
+          </li>
+          <li class="navigation-user-item">
+            <a class="navigation-link link-exit link-exit-main" href="#">Выйти</a>
+          </li> 
+          <li class="navigation-user-item">
+            <a class="navigation-link link-liken" href="#">Сравнить</a>
+          </li>
+          <li class="navigation-user-item">
+            <a class="navigation-link link-basket" href="#">Корзина</a>
+          </li>
+        </ul>
+        <ul class="navigation-site">
+          <li class="navigation-site-item">
+            <a class="link-catalog" href="catalog.html">Каталог товаров</a>
+            <ul class="submenu-list">
+              <li class="submenu-item">
+                <a class="submenu-link">Виртуальная реальность</a>
+                <a class="submenu-link">Моноподы для cелфи</a>
+                <a class="submenu-link">Экшн-камеры</a>
+              </li>
+              <li class="submenu-item">
+                <a class="submenu-link">Фитнес-браслеты</a>
+                <a class="submenu-link">Умные часы</a>
+              </li>
+              <li class="submenu-item"><a class="submenu-link">Квадрокоптеры</a>
+              </li>
+            </ul>
+          </li>
+          <li class="navigation-site-item">
+            <a class="link-delivery" href="#">Доставка</a>
+          </li>
+          <li class="navigation-site-item">
+            <a class="link-garanted" href="#">Гарантия</a>
+          </li>
+          <li class="navigation-site-item">
+            <a class="link-contact" href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
       <main class="main-container main-index">
           <h1 class="visually-hidden">Интернет-магазин Device</h1>
           <section class="slider">
@@ -223,7 +227,7 @@
           <div class="about-container">
             <section class="about">
             <h2 class="about-title">О нас</h2>
-            <p class="about-main">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+            <p class="about-main  ">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
             <p class="about-main text">Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:</p>
             <ul class="delivery-list">
               <li class="delivery-item"><span>Меловые линии</span></li>
