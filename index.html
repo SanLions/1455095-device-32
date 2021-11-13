@@ -29,24 +29,55 @@
           </li>
           <li class="navigation-user-item">
             <a class="navigation-link link-basket" href="#">Корзина</a>
+            <div class="popup">
+              <ul class="popup-list">
+                <li class="popup-item">
+                  <a class="popup-link" href="#">
+                    <img class="popup-img" src="../1455095-device-32/images/product-1.jpg" width="41" height="43"
+                      alt="Любительская селфи-палка.">
+                    <p class="popup-text">Любительская селфи-палка</p>
+                  </a>
+                  <button class="popup-btn" type="submit">
+                    <span class="visually-hidden">Удалить</span>
+                  </button>
+                </li>
+                <li class="popup-item">
+                  <a class="popup-link" href="#">
+                    <img class="popup-img" src="../1455095-device-32/images/product-2.jpg" width="41" height="43"
+                      alt="Профессиональная селфи-палка.">
+                    <p class="popup-text">Профессиональная селфи-палка</p>
+                  </a>
+                  <button class="popup-btn" type="submit">
+                    <span class="visually-hidden">Удалить</span>
+                  </button>
+                </li>
+              </ul>
+              <div class="popup-result">
+                <p class="popup-count">Товаров: 2</p>
+                <p class="popup-sum">Сумма: 2000 ₽</p>
+              </div>
+              <a class="popup-basket-btn" href="#">Открыть корзину</a>
+            </div>
+  
           </li>
         </ul>
         <ul class="navigation-site">
           <li class="navigation-site-item">
             <a class="link-catalog" href="catalog.html">Каталог товаров</a>
-            <ul class="submenu-list">
-              <li class="submenu-item">
-                <a class="submenu-link">Виртуальная реальность</a>
-                <a class="submenu-link">Моноподы для cелфи</a>
-                <a class="submenu-link">Экшн-камеры</a>
-              </li>
-              <li class="submenu-item">
-                <a class="submenu-link">Фитнес-браслеты</a>
-                <a class="submenu-link">Умные часы</a>
-              </li>
-              <li class="submenu-item"><a class="submenu-link">Квадрокоптеры</a>
-              </li>
-            </ul>
+              <ul class="submenu-list">
+                <li class="submenu-item">
+                  <a class="submenu-link">Виртуальная реальность</a>
+                  <a class="submenu-link">Моноподы для cелфи</a>
+                  <a class="submenu-link">Экшн-камеры</a>
+                </li>
+                <li class="submenu-item">
+                  <a class="submenu-link">Фитнес-браслеты</a>
+                  <a class="submenu-link">Умные часы</a>
+                </li>
+                <li class="submenu-item"><a class="submenu-link">Квадрокоптеры</a>
+                </li>
+              </ul>
+            
           </li>
           <li class="navigation-site-item">
             <a class="link-delivery" href="#">Доставка</a>
@@ -210,6 +241,7 @@
             </div>
           </section>
           <section class="extra">
+            <h2 class="visually-hidden">Доставка редкого товара под заказ</h2>
             <button type="button" class="extra-button">
               <svg class="extra-img" width="47" height="31" viewBox="0 0 47 31" xmlns="http://www.w3.org/2000/svg">
                 <path d="M46.7 15.4L40.2 7.2C39.9 6.8 39.5 6.6 39 6.6H30.7V1.5C30.7 0.7 30 0 29.2 0H1.5C0.7 0 0 0.7 0 1.5C0 2.3 0.7 3 1.5 3H27.7V8.1V24.7H15.8C15.2 22.8 13.4 21.4 11.3 21.4C8.7 21.4 6.5 23.6 6.5 26.2C6.5 28.8 8.7 31 11.3 31C13.4 31 15.2 29.6 15.8 27.7H29.2C30 27.7 30.7 27 30.7 26.2V9.6H38.3L44 16.9V24.8H41.8C41.2 22.9 39.4 21.5 37.3 21.5C34.7 21.5 32.5 23.7 32.5 26.3C32.5 28.9 34.6 31.1 37.3 31.1C39.4 31.1 41.2 29.7 41.8 27.8H45.5C46.3 27.8 47 27.1 47 26.3V16.4C47 16 46.9 15.7 46.7 15.4ZM11.3 28C10.3 28 9.5 27.2 9.5 26.2C9.5 25.2 10.3 24.4 11.3 24.4C12.3 24.4 13.1 25.2 13.1 26.2C13.1 27.2 12.2 28 11.3 28ZM37.4 28C36.4 28 35.6 27.2 35.6 26.2C35.6 25.2 36.4 24.4 37.4 24.4C38.4 24.4 39.2 25.2 39.2 26.2C39.2 27.2 38.3 28 37.4 28Z"/>
@@ -265,7 +297,7 @@
                   <input class="field"  placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email" required>
                   <button class="newsletter-button" type="submit">Подписаться</button>
                 </form>
-                <span>Это бесплатно</span>
+                <span class="text-free">Это бесплатно</span>
               </div>
             </div>
           </section>
@@ -337,6 +369,58 @@
           </section>
         </div>
       </footer>
-    </body>
+      <div class="modal-wrapper modal-wrapper-disabled">
+        <section class="modal-window">
+          <h2 class="modal-window-title">Доставка под заказ</h2>
+          <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
+    
+            <ul class="delivery-form-list">
+              <li class="delivery-form-item delivery-form-item-name form-input">
+                <label class="form-input-label" for="name">Ваше имя:</label>
+                <div class="form-input-wrapper">
+                  <input class="form-input-input" type="text" id="name" name="name" placeholder="Имя Фамилия" required>
+                </div>
+                <span class="form-input-sign">Пожалуйста, представьтесь</span>
+              </li>
+              <li class="delivery-form-item delivery-form-item-email form-input">
+                <label class="form-input-label" for="e-mail">Ваш e-mail:</label>
+                <div class="form-input-wrapper">
+                  <input class="form-input-input" type="text" id="e-mail" name="e-mail" placeholder="Ваш e-mail" required>
+                </div>
+                <span class="form-input-sign">Забавный у вас адрес</span>
+              </li>
+              <li class="delivery-form-item delivery-form-item-product form-input">
+                <label class="form-input-label" for="product-name">Что нужно привезти:</label>
+                <input class="form-input-input" type="text" id="product-name" name="product-name"
+                  placeholder="В свободной форме" required>
+              </li>
+              <li class="delivery-form-item delivery-form-item-counter form-counter">
+                <div class="form-counter-title">
+                  <label class="form-counter-label" for="count">Количество:</label>
+                  <div class="form-info">
+                    <span class="visually-hidden">Информация</span>
+                    <p class="form-info-popup">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям
+                      к провозу багажа.</p>
+                  </div>
+                </div>
+                <div class="form-counter-group" tabindex="0">
+                  <button class="form-counter-btn form-counter-btn-minus" type="button">
+                    <span class="visually-hidden">Минус</span>
+                  </button>
+                  <input class="form-counter-input" type="number" id="count" name="count" value="1">
+                  <button class="form-counter-btn form-counter-btn-plus" type="button">
+                    <span class="visually-hidden">Плюс</span>
+                  </button>
+                </div>
+              </li>
+            </ul>
+            <button class="delivery-form-btn" type="submit">Отправить</button>
+            <button class="delivery-form-close" type="button">
+              <span class="visually-hidden">Закрыть</span>
+            </button>
+          </form>
+        </section>
+      </div>
+  </body>
   </html>
 
