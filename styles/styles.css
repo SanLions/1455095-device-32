@@ -315,13 +315,24 @@ input[type="text"] {
     width: 25px;
     height: 25px;
     border: none;
-    border-radius: 50%;
     background-color: transparent;
-    background-image: url(../images/icon/delete.svg);
+    background-image: url("../images/delete.svg");
     background-repeat: no-repeat;
     background-position: right;
     outline: none;
     cursor: pointer;
+}
+
+.popup-btn:focus::before {
+    position: absolute;
+    top: -2px;
+    right: -9px;
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #AF4FFF;
+    border-radius: 50%;
 }
 
 .popup-btn:focus::before {
