@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
-    <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png"> 
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body class="body">
-    <header class="catalog-header">
+    <header class="main-header">
       <a class="navigation-logo" href="index.html">
       <img src="images/full-logo.svg" class="header-logo" alt="Логотип Device" width="145" height="36">
       </a>
@@ -16,6 +16,7 @@
         <ul class="navigation-user">
           <li class="navigation-user-item">
               <form action="https://echo.htmlacademy.ru/courses" method="get">
+                <label class="visually-hidden" for="search">Поиск</label>
                 <input class="link-search" type="text" name="search" id="search" placeholder="Поиск по сайту">
               </form>
           </li>
@@ -30,25 +31,51 @@
           </li>
           <li class="navigation-user-item">
             <a class="navigation-link link-basket" href="#">Корзина</a>
+            <aside class="popup">
+              <ul class="popup-list">
+                <li class="popup-item">
+                  <a class="popup-link" href="#">
+                    <img class="popup-img" src="../1455095-device-32/images/product-1.jpg" width="41" height="43" alt="Любительская селфи-палка.">
+                    <p class="popup-text">Любительская селфи-палка</p>
+                  </a>
+                  <button class="popup-btn" type="submit">
+                    <span class="visually-hidden">Удалить</span>
+                  </button>
+                </li>
+                <li class="popup-item">
+                  <a class="popup-link" href="#">
+                    <img class="popup-img" src="../1455095-device-32/images/product-2.jpg" width="41" height="43" alt="Профессиональная селфи-палка.">
+                    <p class="popup-text">Профессиональная селфи-палка</p>
+                  </a>
+                  <button class="popup-btn" type="submit">
+                    <span class="visually-hidden">Удалить</span>
+                  </button>
+                </li>
+              </ul>
+              <div class="popup-result">
+                <p class="popup-count">Товаров: 2</p>
+                <p class="popup-sum">Сумма: 2000 ₽</p>
+              </div>
+              <a class="popup-basket-btn" href="#">Открыть корзину</a>
+            </aside>
           </li>
         </ul>
         <ul class="navigation-site">
-          <li class="navigation-site-item">
+          <li class="navigation-site-item navigation-site-item-catalog">
             <a class="link-catalog" href="catalog.html">Каталог товаров</a>
-            <ul class="submenu-list">
-              <li class="submenu-item">
-                <a class="submenu-link">Виртуальная реальность</a>
-                <a class="submenu-link">Моноподы для cелфи</a>
-                <a class="submenu-link">Экшн-камеры</a>
-              </li>
-              <li class="submenu-item">
-                <a class="submenu-link">Фитнес-браслеты</a>
-                <a class="submenu-link">Умные часы</a>
-              </li>
-              <li class="submenu-item">
-                <a class="submenu-link">Квадрокоптеры</a>
-              </li>
-            </ul>
+              <ul class="submenu-list">
+                <li class="submenu-item">
+                  <a href="#" class="submenu-link">Виртуальная реальность</a>
+                  <a href="#" class="submenu-link">Моноподы для cелфи</a>
+                  <a href="#" class="submenu-link">Экшн-камеры</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="#" class="submenu-link">Фитнес-браслеты</a>
+                  <a href="#" class="submenu-link">Умные часы</a>
+                </li>
+                <li class="submenu-item"><a href="#" class="submenu-link">Квадрокоптеры</a>
+                </li>
+              </ul>
           </li>
           <li class="navigation-site-item">
             <a class="link-delivery" href="#">Доставка</a>
